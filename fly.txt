@@ -1,0 +1,34 @@
+local uis = game:GetService("UserInputService")
+local plr = game:GetService("Players").LocalPlayer
+local camera = game.Workspace.Camera
+
+local isFlying = false
+uis.InputBegan:Connect(function(key)
+	
+	if key.KeyCode == Enum.KeyCode.T then
+		local hrp = plr.Character.HumanoidRootPart
+		
+		if isFlying then
+			isFlying = false
+			hrp.Anchored = false
+			
+		else
+			isFlying = true
+			hrp.Anchored = true
+		end
+		
+	end
+	
+end)
+
+while wait() do
+	if isFlying and plr.Character then
+		
+		local hrp = plr.Character.HumanoidRootPart
+		plr.Character:SetPrimaryPartCFrame(camera.CFrame*CFrame.new(0,0,-15))
+		print(87)
+		
+	end
+	
+end
+
