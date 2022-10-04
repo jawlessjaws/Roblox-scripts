@@ -1,0 +1,19 @@
+local faces = {Enum.NormalId.Left,Enum.NormalId.Right,Enum.NormalId.Top,Enum.NormalId.Bottom,Enum.NormalId.Front,Enum.NormalId.Back}
+local id = "rbxassetid://11165891849"
+
+function Imigify(p)
+	for i,v in pairs(faces) do
+		
+		local d = Instance.new("Decal")
+		d.Parent = p
+		d.Face = v
+		d.Texture = id
+		
+	end
+end
+
+for i,v in pairs(game.Workspace:GetDescendants()) do
+	if v:IsA("BasePart") then
+			Imigify(v)
+	end
+end
