@@ -1,5 +1,5 @@
 local faces = {Enum.NormalId.Left,Enum.NormalId.Right,Enum.NormalId.Top,Enum.NormalId.Bottom,Enum.NormalId.Front,Enum.NormalId.Back}
-local id = "rbxassetid://11165891849"
+local id = "rbxassetid://2938932295"
 
 function Imigify(p)
 	for i,v in pairs(faces) do
