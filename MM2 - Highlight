@@ -1,0 +1,24 @@
+while wait(2) do
+	local players = game.Players:GetChildren()
+	local murderer = "Noone"
+	local sherif = "Noone"
+
+	for i, v in pairs(players) do
+		if v.Backpack:FindFirstChild("Gun") then
+			sherif = v.Name
+			local hl = Instance.new("Highlight")
+			hl.Parent = v.Character
+			hl.FillColor = Color3.new(0,0,1)
+		end
+			
+		if v.Backpack:FindFirstChild("Knife") then
+				murderer = v.Name
+				local hl = Instance.new("Highlight")
+				hl.Parent = v.Character
+		end
+		
+	end
+		
+		print("Murderer = " .. murderer)
+		print("Sherif = " .. sherif)
+end
